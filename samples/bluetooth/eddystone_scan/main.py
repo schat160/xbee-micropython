@@ -68,7 +68,6 @@ finally:
 with ble.gap_scan(30000, interval_us=50000, window_us=50000) as scanner:
     # Loop through the available advertisements, blocking if there are none. Exits when the scan stops.
     for adv in scanner:
-        print("hello")
         handle_eddystone(adv)
 
     # Leaving the context would automatically end the scan by an implicit scanner.stop()
